@@ -31,7 +31,7 @@
         android:value="@string/google_maps_key"/>
 
     <activity
-        android:name=".ui.main.MainActivity"
+        android:name=".view.splash.SplashActivity"
         android:label="@string/title_activity_main"
         android:theme="@style/NoActionBarTheme">
       <intent-filter>
@@ -41,12 +41,6 @@
       </intent-filter>
     </activity>
 
-
-    <activity
-        android:name=".ui.map.MapsActivity"
-        android:label="@string/title_activity_maps"
-        android:theme="@style/NoActionBarTheme">
-    </activity>
 
   </application>
 

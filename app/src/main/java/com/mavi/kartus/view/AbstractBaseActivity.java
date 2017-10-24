@@ -30,13 +30,13 @@ public class AbstractBaseActivity extends AppCompatActivity {
 
   private void inject() {
     if (component == null) {
-      component = (getMyTaxiApplication()).getApplicationComponent()
+      component = (getKartusApplication()).getApplicationComponent()
           .plus(new AbstractBaseActivityModule(this));
     }
     component.inject(this);
   }
 
-  protected KartusApplication getMyTaxiApplication() {
+  protected KartusApplication getKartusApplication() {
     return ((KartusApplication) getApplication());
   }
 
