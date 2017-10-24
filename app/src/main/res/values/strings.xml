@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Kartus</string>
+  <string name="title_activity_main">Place Mark List</string>
+  <string name="title_activity_maps">Map</string>
+  <string name="empty_message">please pull the screen down to get the latest place mark data</string>
+  <string name="no_place_mark_data_found">No place mark data found</string>
+  <string name="engine_type">Engine Type: </string>
+  <string name="name">Name: </string>
+  <string name="address">Address: </string>
+  <string name="place_mark_title">Place Mark List</string>
+  <string name="cached_on">cached on: %1$s</string>
+  <string name="map">Map</string>
+  <string name="map_title">Map</string>
+  <string name="map_marker_snippet">Engine: %1$s\nFuel: %2$d</string>
+  <string name="all_place_marks">All Place Markers</string>
+  <string name="next">Next</string>
+</resources>

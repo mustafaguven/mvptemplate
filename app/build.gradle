@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+  compileSdkVersion 26
+  buildToolsVersion "26.0.0"
+
+  defaultConfig {
+    applicationId "com.mavi.kartus"
+    minSdkVersion 15
+    targetSdkVersion 26
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    compileOptions {
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
+
+      dexOptions {
+        javaMaxHeapSize "4g"
+      }
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  final VC_RETROFIT = '2.3.0'
+  final VC_RXJAVA = '2.1.5'
+  final VC_RXANDROID = '2.0.1'
+  final VC_SUPPORT = '26.+'
+  final VC_MAP2 = '11.0.4'
+  final VC_TIMBER = '4.5.1'
+  final VC_DAGGER = '2.12'
+  final VC_BUTTERKNIFE = '8.4.0'
+  final VC_JUNIT = '4.12'
+  final VC_PICASSO = '2.5.2'
+  final VC_JODA = '2.9.6'
+  final VC_MOCKITO = '2.3.0'
+
+  def mockito = "org.mockito:mockito-core:$VC_MOCKITO"
+  def daggerCompiler = "com.google.dagger:dagger-compiler:$VC_DAGGER"
+  def butterknifeCompiler = "com.jakewharton:butterknife-compiler:$VC_BUTTERKNIFE"
+  def lombok = 'org.projectlombok:lombok:1.16.8'
+
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+
+  //support lib
+  compile "com.android.support:appcompat-v7:$VC_SUPPORT"
+  compile "com.android.support:recyclerview-v7:$VC_SUPPORT"
+  compile "com.google.android.gms:play-services-maps:$VC_MAP2"
+
+
+  //http client
+  compile "com.squareup.retrofit2:retrofit:$VC_RETROFIT"
+  compile "com.squareup.retrofit2:converter-gson:$VC_RETROFIT" // to use gson within retrofit2
+  compile "com.squareup.retrofit2:adapter-rxjava:$VC_RETROFIT" // to use rx with retrofit2
+  compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+
+  //rx
+  /*  compile "io.reactivex:rxandroid:$VC_RXANDROID"
+    compile "io.reactivex:rxjava:$VC_RXJAVA"*/
+  compile "io.reactivex.rxjava2:rxandroid:$VC_RXANDROID"
+  compile "io.reactivex.rxjava2:rxjava:$VC_RXJAVA"
+
+  //logging
+  compile "com.jakewharton.timber:timber:$VC_TIMBER"
+
+  //dependency injection libraries
+  compile "com.google.dagger:dagger:$VC_DAGGER"
+  apt daggerCompiler
+  compile "com.jakewharton:butterknife:$VC_BUTTERKNIFE"
+  apt butterknifeCompiler
+  annotationProcessor "com.google.dagger:dagger-compiler:${VC_DAGGER}"
+
+  //date
+  compile "joda-time:joda-time:$VC_JODA"
+
+  //image
+  compile "com.squareup.picasso:picasso:$VC_PICASSO"
+
+  //lombok
+  provided lombok
+  apt lombok
+
+  //test
+  testCompile "junit:junit:$VC_JUNIT"
+  testCompile mockito
+  testCompile 'pl.pragmatists:JUnitParams:1.0.5'
+  testApt daggerCompiler
+  testCompile "joda-time:joda-time:$VC_JODA"
+  testCompile 'org.powermock:powermock-api-mockito:1.6.1'
+  testCompile 'org.powermock:powermock-module-junit4-rule-agent:1.6.1'
+  testCompile 'org.powermock:powermock-module-junit4-rule:1.6.1'
+  testCompile 'org.powermock:powermock-module-junit4:1.6.1'
+}
+

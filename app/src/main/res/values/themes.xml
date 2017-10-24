@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- extend one of the Theme.AppCompat themes -->
+  <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowActionBarOverlay">true</item>
+  </style>
+
+
+  <style name="Toolbar" parent="@style/Base.Widget.AppCompat.Toolbar">
+    <item name="android:minHeight">?attr/actionBarSize</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?attr/actionBarSize</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="contentInsetStart">0dp</item>
+    <item name="contentInsetLeft">0dp</item>
+    <item name="contentInsetStartWithNavigation">0dp</item>
+  </style>
+
+
+</resources>

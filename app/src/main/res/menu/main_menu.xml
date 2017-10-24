@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <item
+      android:id="@+id/menu_map"
+      android:icon="@android:drawable/ic_dialog_map"
+      android:title="@string/map"
+      android:visible="false"
+      appcompat:showAsAction="always"
+      tools:visible="true"/>
+
+
+</menu>

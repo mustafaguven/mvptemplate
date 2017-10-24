@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:padding="10dp"
+    >
+
+  <TextView
+      android:id="@+id/tvNameTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/name"
+      android:textStyle="bold"
+      android:layout_marginRight="3dp"
+      android:layout_marginEnd="3dp"
+      />
+
+  <TextView
+      android:id="@+id/tvName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvName"
+      android:layout_toEndOf="@id/tvNameTitle"
+      android:layout_toRightOf="@id/tvNameTitle"
+      tools:text="HH-GO8522"
+      />
+
+
+  <TextView
+      android:id="@+id/tvEngineTypeTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@id/tvNameTitle"
+      android:layout_alignStart="@id/tvNameTitle"
+      android:layout_below="@id/tvName"
+      android:text="@string/engine_type"
+      android:textStyle="bold"
+      android:layout_marginRight="3dp"
+      android:layout_marginEnd="3dp"
+      />
+
+  <TextView
+      android:id="@+id/tvEngineType"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvName"
+      android:layout_toEndOf="@id/tvEngineTypeTitle"
+      android:layout_toRightOf="@id/tvEngineTypeTitle"
+      tools:text="CE"
+      />
+
+  <TextView
+      android:id="@+id/tvAddressTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@id/tvEngineTypeTitle"
+      android:layout_alignStart="@id/tvEngineTypeTitle"
+      android:layout_below="@id/tvEngineTypeTitle"
+      android:text="@string/address"
+      android:textStyle="bold"
+      android:layout_marginRight="3dp"
+      android:layout_marginEnd="3dp"
+      />
+
+  <TextView
+      android:id="@+id/tvAddress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvEngineType"
+      android:layout_toEndOf="@id/tvAddressTitle"
+      android:layout_toRightOf="@id/tvAddressTitle"
+      tools:text="Lesserstraße 170, 22049 Hamburg"
+      />
+
+
+
+
+
+</RelativeLayout>
